@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <!-- jQuery -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <!--  Bootstrap -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <!-- Angular -->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <!-- ui-router -->
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <!-- angular-cookies -->
+    <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
+    <!-- angular-animate -->
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <!-- toaster -->
+    <link href="bower_components/AngularJS-Toaster/toaster.min.css" rel="stylesheet" />
+    <script src="bower_components/AngularJS-Toaster/toaster.min.js"></script>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- app -->
+    <script src="app/app.module.js"></script>
+    <script src="app/app.routes.js"></script>
+
+    <!-- directives -->
+    <script src="app/shared/topbar/topbarDirective.js"></script>
+    <script src="app/shared/sidebar/sidebarDirective.js"></script>
+
+    <!-- controllers -->
+    <script src="app/modules/auth/authController.js"></script>
+</head>
+<body ng-app="BankingApp">
+<toaster-container></toaster-container>
+<!--<a ui-sref="main" ui-sref-active="active">Main</a>-->
+<!--<a ui-sref="about" ui-sref-active="active">About</a>-->
+<topbar ng-if="(hideTopbar) ? false : true"></topbar>
+<div class="container-fluid">
+    <sidebar ng-if="(hideSidebar) ? false : true"></sidebar>
+    <ui-view></ui-view>
+</div>
+</body>
+</html>

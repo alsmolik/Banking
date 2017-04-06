@@ -1,0 +1,12 @@
+{
+  "db":
+  {
+    "development": {
+      "dialect": "mysql",
+      "username": "root",
+      "password": null,
+      "database": "Banking",
+      "host": "127.0.0.1"
+    }
+  }
+}

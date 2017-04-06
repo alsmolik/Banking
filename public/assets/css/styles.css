@@ -1,0 +1,53 @@
+html, body {
+    height: 100%;
+}
+
+body > .container-fluid {
+    padding: 0;
+}
+
+#header {
+    position: fixed;
+    width: 100%;
+}
+
+#header > nav {
+    margin: 0;
+    border-radius: 0;
+}
+
+#main {
+    float: left;
+    width: 90%;
+    margin-top: 50px;
+    margin-left: 10%;
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-color: gainsboro;
+}
+
+#sidebar {
+    position: fixed;
+    height: 100%;
+    top: 50px;
+    background-color: #495469;
+    width: 10%;
+}
+
+#sidebar > a {
+    display: inline-block;
+    width: 100%;
+    background-color: #495469;
+    color: #b2b6be;
+    padding: 10px;
+    text-decoration: none;
+}
+
+#sidebar > a:hover {
+    background-color: #3f485a;
+}
+
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
