@@ -1,12 +1,19 @@
 {
-  "db":
-  {
+  "db": {
     "development": {
       "dialect": "mysql",
       "username": "root",
       "password": null,
       "database": "Banking",
       "host": "127.0.0.1"
+    },
+    "production": {
+      "dialect": "postgres",
+      "username": "bjboufcdsijgjd",
+      "password": "51f5e3b6527a1793c3ed06a12e9590aa7ce3250c5066474ca14044666deef594",
+      "host": "ec2-54-247-189-141.eu-west-1.compute.amazonaws.com",
+      "port": "5432",
+      "database": "d2jnd7e5lcss0d"
     }
   }
 }
