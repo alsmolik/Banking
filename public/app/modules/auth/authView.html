@@ -42,9 +42,9 @@
     <form class="form-signin">
         <h2 class="form-signin-heading">Вход</h2>
         <label for="inputLogin" class="sr-only">Логин</label>
-        <input type="text" id="inputLogin" class="form-control" placeholder="Логин" ng-model="username" required autofocus>
+        <input type="text" id="inputLogin" class="form-control" placeholder="Логин" ng-model="user.username" required autofocus>
         <label for="inputPassword" class="sr-only">Пароль</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Пароль" ng-model="password" required>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Пароль" ng-model="user.password" required>
         <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="login()">Войти</button>
     </form>
 </div>

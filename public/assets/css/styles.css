@@ -16,7 +16,7 @@ body > .container-fluid {
     border-radius: 0;
 }
 
-#main {
+#content {
     float: left;
     width: 90%;
     margin-top: 50px;

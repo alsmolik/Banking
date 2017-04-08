@@ -15,5 +15,6 @@
       "port": "5432",
       "database": "d2jnd7e5lcss0d"
     }
-  }
+  },
+  "secret_key": "very_secret_key"
 }

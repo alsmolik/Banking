@@ -5,8 +5,12 @@ const app = express();
 const fs = require('fs');
 const models = require('./db');
 const path = require("path");
+const bodyParser = require('body-parser');
+const bearerToken = require('express-bearer-token');
 
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/public'));
+app.use(bearerToken());
 
 // read all routes
 fs.readdirSync('./modules').forEach(function (dir) {

@@ -1,6 +1,11 @@
 app.config(($stateProvider) => {
     $stateProvider
         .state({
+            name: 'payments',
+            url: '/payments',
+            templateUrl: 'app/modules/payments/paymentsView.html'
+        })
+        .state({
             name: 'auth',
             url: '/auth',
             templateUrl: 'app/modules/auth/authView.html',

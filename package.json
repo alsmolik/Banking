@@ -10,9 +10,13 @@
   "author": "Smolik",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.17.1",
     "express": "^4.15.2",
+    "express-bearer-token": "^2.1.0",
+    "jsonwebtoken": "^7.3.0",
     "mysql": "^2.13.0",
     "pg": "^6.1.5",
-    "sequelize": "^3.30.3"
+    "sequelize": "^3.30.3",
+    "sha256": "^0.2.0"
   }
 }

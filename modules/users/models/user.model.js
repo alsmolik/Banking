@@ -12,7 +12,7 @@ module.exports = function(sequelize, DataTypes) {
             unique: true,
             allowNull: false
         },
-        password: DataTypes.CHAR(60)
+        password: DataTypes.CHAR(64)
     });
 
     return User;
