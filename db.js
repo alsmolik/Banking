@@ -12,6 +12,7 @@ fs
     .readdirSync('./modules')
     .forEach(function (dir) {
         if (dir.indexOf('.') == 0) return;
+        if (fs.existsSync('./modules/' + dir + '/models/'))
             fs.readdirSync('./modules/' + dir + '/models/').forEach(function (file) {
                 var model = sequelize.import('./modules/' + dir + '/models/' + file);
                 db[model.name] = model;
