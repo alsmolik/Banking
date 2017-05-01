@@ -45,6 +45,7 @@
         <input type="text" id="inputLogin" class="form-control" placeholder="Логин" ng-model="user.username" required autofocus>
         <label for="inputPassword" class="sr-only">Пароль</label>
         <input type="password" id="inputPassword" class="form-control" placeholder="Пароль" ng-model="user.password" required>
-        <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="login()">Войти</button>
+        <button class="btn btn-lg btn-success btn-block" type="submit" ng-click="login()" ng-disabled="!(user.username && user.password)">Войти</button>
+        <button class="btn btn-lg btn-primary btn-block" ng-click="signup()">Зарегистрироваться</button>
     </form>
 </div>

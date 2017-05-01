@@ -1,4 +1,24 @@
-<div id="sidebar">
-    <a href="">Главная</a>
-    <a href="">О нас</a>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+<div class="nav-side-menu">
+    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+
+    <div class="menu-list">
+
+        <ul id="menu-content" class="menu-content collapse out">
+            <li ui-sref-active="active">
+                <a ui-sref="payments">
+                    Платежи
+                </a>
+            </li>
+
+            <li data-toggle="collapse" data-target="#cards" class="collapsed">
+                <a> Карты <span class="arrow"></span></a>
+            </li>
+            <ul class="sub-menu collapse" id="cards">
+                <li ui-sref-active="active"><a ui-sref="cards">Список карт</a></li>
+                <li ui-sref-active="active"><a ui-sref="addCard">Добавить карту</a></li>
+            </ul>
+        </ul>
+    </div>
 </div>

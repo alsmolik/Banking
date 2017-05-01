@@ -1,0 +1,105 @@
+<style>
+    body {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: #eee;
+    }
+
+    .form-signup {
+        max-width: 330px;
+        padding: 15px;
+        margin: 0 auto;
+    }
+    .form-signup .form-signup-heading {
+        margin-bottom: 10px;
+    }
+
+    .form-group {
+        margin-bottom: 0;
+    }
+
+    .form-control-feedback {
+        top: 5px !important;
+    }
+
+    .form-signup .form-control {
+        position: relative;
+        height: auto;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    input[type='password'], input[type='text'] {
+        border-radius: 0;
+    }
+
+    #inputLogin {
+        border-radius: 10px 10px 0 0;
+    }
+
+    #inputIdentificationNumber {
+        border-radius: 0 0 10px 10px;
+    }
+
+    button[type='submit'] {
+        margin-top: 10px;
+    }
+
+    .success {
+        color: green;
+    }
+</style>
+
+<div class="container">
+    <form class="form-signup" name="signupForm">
+        <h2 class="form-signup-heading">Регистрация</h2>
+        <!-- Логин -->
+        <div class="form-group has-feedback">
+            <label for="inputLogin" class="sr-only">Логин</label>
+            <input type="text" id="inputLogin" name="inputLogin" class="form-control" placeholder="Логин" ng-model="user.username" required autofocus>
+            <i class="glyphicon form-control-feedback" ng-class="(signupForm.inputLogin.$valid) ? 'glyphicon-ok text-success' : 'glyphicon-remove text-danger'"></i>
+        </div>
+        <!-- Пароль -->
+        <div class="form-group has-feedback">
+            <label for="inputPassword1" class="sr-only">Пароль</label>
+            <input type="password" id="inputPassword1" name="inputPassword1" class="form-control" placeholder="Пароль" ng-model="user.password1" required>
+            <i class="glyphicon form-control-feedback" ng-class="(signupForm.inputPassword1.$valid) ? 'glyphicon-ok text-success' : 'glyphicon-remove text-danger'"></i>
+        </div>
+        <!-- Пароль 2 -->
+        <div class="form-group has-feedback">
+            <label for="inputPassword2" class="sr-only">Повторите пароль</label>
+            <input type="password" id="inputPassword2" name="inputPassword2" class="form-control" placeholder="Повторите пароль" ng-model="user.password2" required>
+            <i class="glyphicon form-control-feedback" ng-class="(signupForm.inputPassword2.$valid && user.password1 == user.password2) ? 'glyphicon-ok text-success' : 'glyphicon-remove text-danger'"></i>
+        </div>
+        <!-- Фамилия -->
+        <div class="form-group has-feedback">
+            <label for="inputSurname" class="sr-only">Фамилия</label>
+            <input type="text" id="inputSurname" name="inputSurname" class="form-control" placeholder="Фамилия" ng-model="user.surname" required>
+            <i class="glyphicon form-control-feedback" ng-class="(signupForm.inputSurname.$valid) ? 'glyphicon-ok text-success' : 'glyphicon-remove text-danger'"></i>
+        </div>
+        <!-- Имя -->
+        <div class="form-group has-feedback">
+            <label for="inputName" class="sr-only">Имя</label>
+            <input type="text" id="inputName" name="inputName" class="form-control" placeholder="Имя" ng-model="user.name" required>
+            <i class="glyphicon form-control-feedback" ng-class="(signupForm.inputName.$valid) ? 'glyphicon-ok text-success' : 'glyphicon-remove text-danger'"></i>
+        </div>
+        <!-- Отчество -->
+        <div class="form-group has-feedback">
+            <label for="inputPatronymic" class="sr-only">Отчество</label>
+            <input type="text" id="inputPatronymic" name="inputPatronymic" class="form-control" placeholder="Отчество" ng-model="user.patronymic" required>
+            <i class="glyphicon form-control-feedback" ng-class="(signupForm.inputPatronymic.$valid) ? 'glyphicon-ok text-success' : 'glyphicon-remove text-danger'"></i>
+        </div>
+        <!-- Личный номер паспорта -->
+        <div class="form-group has-feedback">
+            <label for="inputIdentificationNumber" class="sr-only">Личный номер паспорта</label>
+            <input type="text" id="inputIdentificationNumber" name="inputIdentificationNumber" class="form-control" placeholder="Личный номер паспорта" ng-model="user.identification_number" required>
+            <i class="glyphicon form-control-feedback" ng-class="(signupForm.inputIdentificationNumber.$valid) ? 'glyphicon-ok text-success' : 'glyphicon-remove text-danger'"></i>
+        </div>
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="signup()" ng-disabled="!signupForm.$valid">Зарегистрироваться</button>
+        <button class="btn btn-lg btn-danger btn-block" ng-click="cancel()">Отмена</button>
+    </form>
+</div>

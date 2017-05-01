@@ -16,8 +16,18 @@
     <!-- angular-animate -->
     <script src="bower_components/angular-animate/angular-animate.min.js"></script>
     <!-- toaster -->
-    <link href="bower_components/AngularJS-Toaster/toaster.min.css" rel="stylesheet" />
+    <link href="bower_components/AngularJS-Toaster/toaster.min.css" rel="stylesheet"/>
     <script src="bower_components/AngularJS-Toaster/toaster.min.js"></script>
+    <!-- ui.card -->
+    <link rel="stylesheet" href="bower_components/angular-ui-card/dist/angular-ui-card.css"/>
+    <script src="bower_components/angular-ui-card/dist/angular-ui-card.js"></script>
+    <!-- ng-table -->
+    <link rel="stylesheet" href="bower_components/ng-table/dist/ng-table.min.css"/>
+    <script src="bower_components/ng-table/dist/ng-table.min.js"></script>
+    <!-- ngSweetAlert -->
+    <script src="bower_components/ngSweetAlert/SweetAlert.min.js"></script>
+    <script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="bower_components/sweetalert/dist/sweetalert.css">
 
     <!-- styles -->
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -30,16 +40,22 @@
     <script src="app/shared/topbar/topbarDirective.js"></script>
     <script src="app/shared/sidebar/sidebarDirective.js"></script>
 
+    <!-- main -->
+    <script src="main.js"></script>
+
     <!-- services -->
     <script src="app/modules/auth/authService.js"></script>
+    <script src="app/modules/signup/signupService.js"></script>
+    <script src="app/modules/cards/cardsService.js"></script>
 
     <!-- controllers -->
     <script src="app/modules/auth/authController.js"></script>
+    <script src="app/modules/signup/signupController.js"></script>
+    <script src="app/modules/cards/addCardController.js"></script>
+    <script src="app/modules/cards/cardsController.js"></script>
 </head>
 <body ng-app="BankingApp">
 <toaster-container></toaster-container>
-<!--<a ui-sref="main" ui-sref-active="active">Main</a>-->
-<!--<a ui-sref="about" ui-sref-active="active">About</a>-->
 <topbar ng-if="(hideTopbar) ? false : true"></topbar>
 <div class="container-fluid">
     <sidebar ng-if="(hideSidebar) ? false : true"></sidebar>

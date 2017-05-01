@@ -1,7 +1,7 @@
 "use strict";
 
-module.exports = function(sequelize, DataTypes) {
-    var User = sequelize.define("User", {
+module.exports = function (sequelize, DataTypes) {
+    let User = sequelize.define("User", {
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
@@ -12,7 +12,17 @@ module.exports = function(sequelize, DataTypes) {
             unique: true,
             allowNull: false
         },
-        password: DataTypes.CHAR(64)
+        password: DataTypes.CHAR(64),
+        surname: DataTypes.STRING,
+        name: DataTypes.STRING,
+        patronymic: DataTypes.STRING,
+        identification_number: DataTypes.STRING
+    }, {
+        classMethods: {
+            associate: (models) => {
+                User.hasMany(models.Card);
+            }
+        }
     });
 
     return User;

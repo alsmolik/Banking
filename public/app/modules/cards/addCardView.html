@@ -1,0 +1,14 @@
+<ol class="breadcrumb">
+    <li class="breadcrumb-item active">Добавление новой карты</li>
+</ol>
+<div id="content">
+    <card options="{}" disable="false">
+        <div class="text-center margin-top-20">
+            <input card-number ng-model="card.number" placeholder="Номер карты" type="text">
+            <input card-name ng-model="card.name" placeholder="Имя" type="text"><br>
+            <input card-expiry ng-model="card.expires" maxlength="7" placeholder="MM/YY" type="text">
+            <input card-cvc ng-model="card.cvc" maxlength="3" placeholder="CVC" type="text">
+        </div>
+    </card>
+    <button type="button" class="btn btn-success pull-right margin-top-20" ng-click="add()" ng-disabled="!isValid()">Добавить</button>
+</div>
