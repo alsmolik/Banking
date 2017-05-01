@@ -1,0 +1,47 @@
+{
+  "name": "angular-ui-card",
+  "version": "1.2.4",
+  "description": "A better credit card form in one line of code for angular js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nebulr/ui.card.git"
+  },
+  "keywords": [
+    "ui.card",
+    "card",
+    "angular-card",
+    "credit",
+    "card",
+    "creditcard",
+    "credit",
+    "angularjs"
+  ],
+  "devDependencies": {
+    "browser-sync": "^2.12.1",
+    "connect-modrewrite": "^0.9.0",
+    "gulp": "^3.9.1",
+    "gulp-angular-filesort": "^1.1.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.1",
+    "gulp-ng-annotate": "^2.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-sass-glob": "^1.0.5",
+    "gulp-uglify": "^1.5.3",
+    "gulp-usemin": "^0.3.22",
+    "gulp-util": "^3.0.7"
+  },
+  "dependencies": {
+    "gulp-rename": "^1.2.2"
+  },
+  "author": "James A. Meyer <james@swiftgrid.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nebulr/ui.card/issues"
+  },
+  "homepage": "https://github.com/nebulr/ui.card#readme"
+}

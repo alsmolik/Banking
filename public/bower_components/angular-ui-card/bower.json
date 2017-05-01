@@ -1,0 +1,28 @@
+{
+  "name": "angular-ui-card",
+  "version": "1.2.4",
+  "authors": [
+    "James Meyer <james@swiftgrid.io>"
+  ],
+  "description": "A better credit card form in one line of code for angular js",
+  "main": [
+    "dist/angular-ui-card.js",
+    "dist/angular-ui-card.css"
+  ],
+  "keywords": [
+    "card",
+    "credit",
+    "form",
+    "angularjs"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src"
+  ]
+}

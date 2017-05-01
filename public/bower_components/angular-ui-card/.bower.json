@@ -1,0 +1,38 @@
+{
+  "name": "angular-ui-card",
+  "version": "1.2.4",
+  "authors": [
+    "James Meyer <james@swiftgrid.io>"
+  ],
+  "description": "A better credit card form in one line of code for angular js",
+  "main": [
+    "dist/angular-ui-card.js",
+    "dist/angular-ui-card.css"
+  ],
+  "keywords": [
+    "card",
+    "credit",
+    "form",
+    "angularjs"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/nebulr/ui-card",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src"
+  ],
+  "_release": "1.2.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.2.4",
+    "commit": "dfa62df63d2f02ffa323c352cd8d234ba43256af"
+  },
+  "_source": "https://github.com/nebulr/ui-card.git",
+  "_target": "^1.2.4",
+  "_originalSource": "angular-ui-card",
+  "_direct": true
+}

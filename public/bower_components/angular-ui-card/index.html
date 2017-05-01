@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>ui.card by nebulr</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/angular-material.min.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+
+    <script src="./js/angular.js"></script>
+    <script src="./js/angular-aria.min.js"></script>
+    <script src="./js/angular-animate.js"></script>
+    <script src="./js/angular-material.min.js"></script>
+
+    <link rel="stylesheet" href="./dist/angular-ui-card.css" />
+    <script src="./dist/angular-ui-card.js"></script>
+
+    <script src="./js/app.js"></script>
+  </head>
+  <body ng-app="app" ng-controller="AppController">
+    <section class="page-header">
+      <h1 class="project-name">ui.card</h1>
+      <h2 class="project-tagline">A better credit card form in one line of code for angular js</h2>
+      <a href="https://github.com/nebulr/ui-card" class="btn">View on GitHub</a>
+      <a href="https://github.com/nebulr/ui-card/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/nebulr/ui-card/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+
+      <p>This is an angular implementation of <a href="http://jessepollak.github.io/card/" target="_blank">http://jessepollak.github.io/card/</a> This requires no dependencies and written entirely in angular! ( That means no card install or jquery install necessary ) For options usage and ability just look at that page.</p>
+
+      <h1>
+      <a id="install" class="anchor" href="#install" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Install</h1>
+
+      <p><code>bower install angular-ui-card</code>
+
+      <h1>
+      <a id="add-files" class="anchor" href="#add-files" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Add files</h1>
+
+      <pre><code>&lt;link rel="stylesheet" href="bower_components/angular-ui-card/dist/angular-ui-card.css"/&gt;
+      &lt;script src="bower_components/angular-ui-card/dist/angular-ui-card.js"&gt;&lt;/script&gt;
+      </code></pre>
+
+      <h1>
+      <a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h1>
+
+      <p>Add the module dependency to your project
+      <code>angular.module('app', ['ui.card']);</code></p>
+
+      <p>Sample Usage :</p>
+
+      <pre>
+        <code>
+          &lt;card ng-submit="submit()" options="{}" disable="false"&gt;
+            &lt;input card-number placeholder="Card number" type="text"&gt;
+            &lt;input card-name placeholder="Full name" type="text"&gt;&lt;br&gt;
+            &lt;input card-expiry placeholder="MM/YY" type="text"&gt;
+            &lt;input card-cvc placeholder="CVC" type="text"&gt;
+            &lt;button type="submit"&gt;Submit&lt;/button&gt;
+          &lt;card/&gt;
+        </code>
+      </pre>
+
+      <card role="form" ng-submit="submit()" options="{}" disable="false">
+          <input card-number placeholder="Card number" type="text" ng-model="card.number" />
+          <input card-name placeholder="Full name" type="text"  ng-model="card.name" /><br>
+          <input card-expiry placeholder="MM/YYYY" type="text" ng-model="card.expiry" />
+          <input card-cvc placeholder="CVC" type="text" ng-model="card.cvc" />
+          <button type="submit">Submit</button>
+      </card>
+
+      <script type="text/ng-template" id="dialog1.tmpl.html">
+        <md-dialog aria-label="Card"  ng-cloak>
+          <card role="form" ng-submit="submit()" options="{}" disable="false">
+              <input card-number placeholder="Card number" type="text" ng-model="card.number" />
+              <input card-name placeholder="Full name" type="text"  ng-model="card.name" /><br>
+              <input card-expiry placeholder="MM/YYYY" type="text" ng-model="card.expiry" />
+              <input card-cvc placeholder="CVC" type="text" ng-model="card.cvc" />
+              <button type="submit">Submit</button>
+          </card>
+        </md-dialog>
+      </script>
+      <br/>
+      <md-content>
+        <md-button class="md-raised md-primary" ng-click="showAdvanced()">Open up a dialog</md-button>
+      </md-content>
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/nebulr/ui.card">ui.card</a> is maintained by <a href="https://github.com/nebulr">nebulr</a>.</span>
+      </footer>
+
+    </section>
+
+
+  </body>
+</html>
