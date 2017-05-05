@@ -1,4 +1,4 @@
-const app = angular.module('BankingApp', ['ui.router', 'ngCookies', 'toaster', 'ui.card', 'ngTable', 'oitozero.ngSweetAlert']);
+const app = angular.module('BankingApp', ['ui.router', 'ngCookies', 'toaster', 'ui.card', 'ngTable', 'oitozero.ngSweetAlert', 'ui.bootstrap']);
 
 app.factory('myHttpInterceptor', function ($q, $location, toaster, $cookieStore) {
     return {
@@ -27,7 +27,7 @@ app.config(function ($httpProvider) {
     $httpProvider.interceptors.push('myHttpInterceptor');
 });
 
-app.config(function ($httpProvider, $httpParamSerializerJQLikeProvider) {
+app.config(function ($httpProvider, $httpParamSerializerJQLikeProvider, $locationProvider) {
     $httpProvider.defaults.transformRequest.unshift($httpParamSerializerJQLikeProvider.$get());
     $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded; charset=utf-8';
 });

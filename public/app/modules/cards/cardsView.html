@@ -10,10 +10,11 @@
 <div id="content">
     <table ng-table="tableParams" class="table">
         <tr ng-repeat="row in $data">
-            <td title="'Номер карты'">{{row.number}}</td>
-            <td title="'Имя владельца'">{{row.name}}</td>
-            <td title="'CVC код'">{{row.cvc}}</td>
-            <td title="'Срок действия'">{{row.expires}}</td>
+            <td title="'Номер карты'" ng-bind="row.number"></td>
+            <td title="'Имя владельца'" ng-bind="row.name"></td>
+            <td title="'CVC код'" ng-bind="row.cvc"></td>
+            <td title="'Срок действия'" ng-bind="row.expires"></td>
+            <td title="'Баланс'" ng-bind="row.balance"></td>
             <td title="'Действия'" width="10px" class="text-center">
                 <i class="glyphicon glyphicon-remove text-danger" ng-click="deleteCard(row.id)"></i>
             </td>

@@ -21,6 +21,13 @@ app.config(($stateProvider) => {
             authenticate: true
         })
         .state({
+            name: 'newPayment',
+            url: '/newPayment',
+            templateUrl: 'app/modules/payments/newPaymentView.html',
+            controller: 'newPaymentController',
+            authenticate: true
+        })
+        .state({
             name: 'cards',
             url: '/cards',
             templateUrl: 'app/modules/cards/cardsView.html',

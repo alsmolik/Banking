@@ -37,6 +37,10 @@ module.exports = function (sequelize, DataTypes) {
         },
         name: {
             type: DataTypes.STRING
+        },
+        balance: {
+            type: DataTypes.DECIMAL(10, 2),
+            defaultValue: 0
         }
     });
 

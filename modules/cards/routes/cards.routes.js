@@ -10,6 +10,9 @@ module.exports = function (app) {
     app.route('/api/users/:userId/cards').all(checkAuth)
         .get(cardsController.getUserCards);
 
+    app.route('/api/users/:userId/cards/list').all(checkAuth)
+        .get(cardsController.getUserCardsList);
+
     app.route('/api/cards/:cardId').all(checkAuth)
-        .put(cardsController.delete);
+        .delete(cardsController.delete);
 };

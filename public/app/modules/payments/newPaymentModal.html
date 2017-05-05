@@ -1,0 +1,27 @@
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Новый платеж</h3>
+</div>
+<div class="modal-body" id="modal-body">
+    <form>
+        <div class="form-group">
+            <label for="serviceName">Услуга</label>
+            <input type="text" class="form-control" id="serviceName" ng-value="serviceName" disabled="true">
+        </div>
+        <div class="form-group">
+            <label for="card">Карта</label>
+            <select class="form-control" id="card" ng-model="cardId">
+                <option value="">Выберите карту</option>
+                <option ng-repeat="card in cards" ng-value="card.id">{{card.number}} (баланс: {{card.balance}})</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="amount">Сумма платежа</label>
+            <input type="number" min="0" ng-max="getCardBalance(cardId)" step="0.1" class="form-control" id="amount"
+                   ng-model="amount" ng-init="amount = 0.0"/>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-default" type="button" ng-click="cancel()">Отмена</button>
+    <button class="btn btn-primary" type="button" ng-click="pay()" ng-disabled="!cardId || !amount">Оплатить</button>
+</div>

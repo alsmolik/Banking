@@ -16,18 +16,19 @@ app.controller('cardsController', function ($scope, $rootScope, NgTableParams, c
     $scope.deleteCard = function (id) {
         SweetAlert.swal({
             title: "Внимание!",
-            text: "Вы действительно хотите удалить карточку?",
+            text: "Вы действительно хотите удалить карту?",
             type: "warning",
             showCancelButton: true,
             cancelButtonText: "Отмена",
             closeOnConfirm: false
-        }, function () {
-            cardsService.delete(id)
-                .then(() => {
-                    swal("Готово!", "Карточка успешно удалена.", "success");
-                    $scope.tableParams.reload();
-                })
-                .catch(errResponse => $rootScope.app.handleError(errResponse.data));
+        }, function (result) {
+            if (result)
+                cardsService.delete(id)
+                    .then(() => {
+                        swal("Готово!", "Карта успешно удалена.", "success");
+                        $scope.tableParams.reload();
+                    })
+                    .catch(errResponse => $rootScope.app.handleError(errResponse.data));
         });
     };
 });

@@ -21,7 +21,18 @@ exports.create = function (req, res) {
 
 exports.getUserCards = function (req, res) {
     if (req.params.userId == req.user.id) {
-        cardsService.getUserCards(req.params.userId, +req.query.limit || 10, +req.query.offset || 0)
+        cardsService.getUserCards(req.params.userId)
+            .then(result => res.json(result))
+            .catch(err => res.status(err.statusCode || 500).json(handleError(err)));
+    } else {
+        res.status(400).json({message: 'Вы не можете просматривать чужие карты'});
+    }
+};
+
+
+exports.getUserCardsList = function (req, res) {
+    if (req.params.userId == req.user.id) {
+        cardsService.getUserCardsList(req.params.userId, +req.query.limit || 10, +req.query.offset || 0)
             .then(result => res.json(result))
             .catch(err => res.status(err.statusCode || 500).json(handleError(err)));
     } else {

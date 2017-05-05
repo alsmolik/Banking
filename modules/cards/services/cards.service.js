@@ -9,7 +9,15 @@ module.exports = function (cards) {
         });
     };
 
-    this.getUserCards = function (userId, limit, offset) {
+    this.getUserCards = function (userId) {
+        return new Promise((resolve, reject) => {
+            cards.findAll({where: {UserId: userId}})
+                .then(resolve)
+                .catch(reject);
+        })
+    };
+
+    this.getUserCardsList = function (userId, limit, offset) {
         return new Promise((resolve, reject) => {
             cards.findAndCountAll({where: {UserId: userId}, limit: limit, offset: offset})
                 .then(resolve)

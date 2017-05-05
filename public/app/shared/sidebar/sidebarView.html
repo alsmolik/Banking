@@ -6,16 +6,18 @@
     <div class="menu-list">
 
         <ul id="menu-content" class="menu-content collapse out">
-            <li ui-sref-active="active">
-                <a ui-sref="payments">
-                    Платежи
-                </a>
+            <li>
+                <a> Платежи </a>
             </li>
+            <ul class="sub-menu">
+                <li ui-sref-active="active"><a ui-sref="payments">Список платежей</a></li>
+                <li ui-sref-active="active"><a ui-sref="newPayment">Новый платеж</a></li>
+            </ul>
 
-            <li data-toggle="collapse" data-target="#cards" class="collapsed">
-                <a> Карты <span class="arrow"></span></a>
+            <li>
+                <a> Карты </a>
             </li>
-            <ul class="sub-menu collapse" id="cards">
+            <ul class="sub-menu">
                 <li ui-sref-active="active"><a ui-sref="cards">Список карт</a></li>
                 <li ui-sref-active="active"><a ui-sref="addCard">Добавить карту</a></li>
             </ul>

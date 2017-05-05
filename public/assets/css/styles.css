@@ -130,16 +130,6 @@ body > .container-fluid {
     color: #e1ffff;
 }
 
-.nav-side-menu li:hover {
-    border-left: 3px solid #f8f8f8;
-    background-color: #4f5b69;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    transition: all 1s ease;
-}
-
 .nav-side-menu .menu-list .menu-content {
     display: block;
 }
