@@ -18,6 +18,7 @@ app.config(($stateProvider) => {
             name: 'payments',
             url: '/payments',
             templateUrl: 'app/modules/payments/paymentsView.html',
+            controller: 'paymentsController',
             authenticate: true
         })
         .state({
@@ -39,6 +40,20 @@ app.config(($stateProvider) => {
             url: '/addCard',
             templateUrl: 'app/modules/cards/addCardView.html',
             controller: 'addCardController',
+            authenticate: true
+        })
+        .state({
+            name: 'newTransfer',
+            url: '/newTransfer',
+            templateUrl: 'app/modules/transfers/newTransferView.html',
+            controller: 'newTransferController',
+            authenticate: true
+        })
+        .state({
+            name: 'transfers',
+            url: '/transfers',
+            templateUrl: 'app/modules/transfers/transfersView.html',
+            controller: 'transfersController',
             authenticate: true
         });
 });

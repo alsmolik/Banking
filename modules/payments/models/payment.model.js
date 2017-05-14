@@ -1,20 +1,22 @@
-"use strict";
+'use strict';
 
 module.exports = function (sequelize, DataTypes) {
-    let Service = sequelize.define('Service', {
+    let Payment = sequelize.define('Payment', {
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        name: DataTypes.STRING
+        amount: DataTypes.DECIMAL(10, 2)
     }, {
         classMethods: {
             associate: function (models) {
-                Service.belongsTo(models.ServiceCategory);
+                Payment.belongsTo(models.User);
+                Payment.belongsTo(models.Service);
+                Payment.belongsTo(models.Card);
             }
         }
     });
 
-    return Service;
+    return Payment;
 };

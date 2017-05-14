@@ -21,8 +21,4 @@ fs.readdirSync('./modules').forEach(function (dir) {
         });
 });
 
-models.sequelize.sync().then(() => {
-    app.listen(process.env.PORT || 3000, function () {
-        console.log('Example app listening on port 3000!');
-    });
-});
+models.sequelize.sync().then(() => app.listen(process.env.PORT || 3000, () => console.log('Banking app listening on port 3000!')));

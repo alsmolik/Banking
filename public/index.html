@@ -31,6 +31,12 @@
     <!-- angular-bootstrap -->
     <link rel="stylesheet" type="text/css" href="bower_components/angular-bootstrap/ui-bootstrap-csp.css"/>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <!-- angular-moment -->
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/moment/locale/ru.js"></script>
+    <script src="bower_components/angular-moment/angular-moment.min.js"></script>
+    <!-- angular-sanitize -->
+    <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
 
     <!-- styles -->
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -51,13 +57,17 @@
     <script src="app/modules/signup/signupService.js"></script>
     <script src="app/modules/cards/cardsService.js"></script>
     <script src="app/modules/payments/paymentsService.js"></script>
+    <script src="app/modules/transfers/transfersService.js"></script>
 
     <!-- controllers -->
     <script src="app/modules/auth/authController.js"></script>
     <script src="app/modules/signup/signupController.js"></script>
     <script src="app/modules/cards/addCardController.js"></script>
     <script src="app/modules/cards/cardsController.js"></script>
+    <script src="app/modules/payments/paymentsController.js"></script>
     <script src="app/modules/payments/newPaymentController.js"></script>
+    <script src="app/modules/transfers/transfersController.js"></script>
+    <script src="app/modules/transfers/newTransferController.js"></script>
 </head>
 <body ng-app="BankingApp">
 <toaster-container></toaster-container>

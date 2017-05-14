@@ -1,1 +1,19 @@
-<div id="content">Hello, world!</div>
+<style>
+    th.header {
+        text-align: left;
+    }
+</style>
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item active">Список платежей</li>
+</ol>
+<div id="content">
+    <table ng-table="tableParams" class="table">
+        <tr ng-repeat="row in $data">
+            <td title="'Услуга'">{{row.Service.ServiceCategory.name}} / {{row.Service.name}}</td>
+            <td title="'Номер карты'">**** **** **** {{row.Card.number.slice(12)}}</td>
+            <td title="'Сумма платежа'" ng-bind="row.amount"></td>
+            <td title="'Дата проведения'" am-time-ago="row.createdAt"></td>
+        </tr>
+    </table>
+</div>

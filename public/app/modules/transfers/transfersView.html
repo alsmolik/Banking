@@ -1,0 +1,21 @@
+<style>
+    th.header {
+        text-align: left;
+    }
+</style>
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item active">Список переводов</li>
+</ol>
+<div id="content">
+    <table ng-table="tableParams" class="table">
+        <tr ng-repeat="row in $data">
+            <td title="'Тип'" ng-bind-html="getType(row.fromUser, row.toUser)"></td>
+            <td title="'С карты'">**** **** **** {{row.from_card.number.slice(12)}}</td>
+            <td title="'На карту'">**** **** **** {{row.to_card.number.slice(12)}}</td>
+            <td title="'Сумма перевода'" ng-bind="row.amount"></td>
+            <td title="'Примечания'" ng-bind="row.notes"></td>
+            <td title="'Дата проведения'" am-time-ago="row.createdAt"></td>
+        </tr>
+    </table>
+</div>

@@ -10,7 +10,7 @@
 <div id="content">
     <table ng-table="tableParams" class="table">
         <tr ng-repeat="row in $data">
-            <td title="'Номер карты'" ng-bind="row.number"></td>
+            <td title="'Номер карты'">**** **** **** {{row.number.slice(12)}}</td>
             <td title="'Имя владельца'" ng-bind="row.name"></td>
             <td title="'CVC код'" ng-bind="row.cvc"></td>
             <td title="'Срок действия'" ng-bind="row.expires"></td>

@@ -1,4 +1,4 @@
-app.controller('newPaymentController', function ($scope, $rootScope, paymentsService, cardsService, $uibModal) {
+app.controller('newPaymentController', function ($scope, $rootScope, paymentsService, cardsService, $uibModal, toaster) {
     paymentsService.getServices()
         .then(response => {
             $scope.services = response.data;
@@ -11,7 +11,7 @@ app.controller('newPaymentController', function ($scope, $rootScope, paymentsSer
         })
         .catch(errResponse => $rootScope.app.handleError(errResponse.data));
 
-    $scope.openPaymentDialog = function (serviceCategory, serviceName) {
+    $scope.openPaymentDialog = function (serviceId, serviceCategory, serviceName) {
         let modalInstance = $uibModal.open({
             templateUrl: '/app/modules/payments/newPaymentModal.html',
             controller: 'newPaymentModalController',
@@ -21,8 +21,10 @@ app.controller('newPaymentController', function ($scope, $rootScope, paymentsSer
             }
         });
 
-        modalInstance.result.then((cardId, amount) => {
-            alert(amount);
+        modalInstance.result.then((result) => {
+            paymentsService.pay(serviceId, result.cardId, result.amount)
+                .then(() => toaster.pop('success', 'Платеж успешно выполнен'))
+                .catch(errResponse => $rootScope.app.handleError(errResponse.data));
         });
     };
 });
@@ -41,5 +43,9 @@ app.controller('newPaymentModalController', function ($uibModalInstance, $scope,
 
     $scope.cancel = function () {
         $uibModalInstance.close();
+    };
+
+    $scope.pay = function () {
+        $uibModalInstance.close({cardId: $scope.cardId, amount: $scope.amount});
     };
 });

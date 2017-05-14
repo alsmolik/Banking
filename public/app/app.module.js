@@ -1,4 +1,4 @@
-const app = angular.module('BankingApp', ['ui.router', 'ngCookies', 'toaster', 'ui.card', 'ngTable', 'oitozero.ngSweetAlert', 'ui.bootstrap']);
+const app = angular.module('BankingApp', ['ui.router', 'ngCookies', 'toaster', 'ui.card', 'ngTable', 'oitozero.ngSweetAlert', 'ui.bootstrap', 'angularMoment', 'ngSanitize']);
 
 app.factory('myHttpInterceptor', function ($q, $location, toaster, $cookieStore) {
     return {

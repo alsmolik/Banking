@@ -11,7 +11,7 @@
             <label for="card">Карта</label>
             <select class="form-control" id="card" ng-model="cardId">
                 <option value="">Выберите карту</option>
-                <option ng-repeat="card in cards" ng-value="card.id">{{card.number}} (баланс: {{card.balance}})</option>
+                <option ng-repeat="card in cards" ng-value="card.id">**** **** **** {{card.number.slice(12)}} (баланс: {{card.balance}})</option>
             </select>
         </div>
         <div class="form-group">

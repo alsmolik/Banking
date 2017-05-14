@@ -30,13 +30,7 @@ module.exports = function (users) {
                         reject({statusCode: 409, message: 'Пользователь с таким логином уже существует'});
                     } else {
                         newUser.password = sha256(newUser.password);
-                        users.build(newUser).save()
-                            .then(() => {
-                                resolve();
-                            })
-                            .catch(err => {
-                                reject(err);
-                            });
+                        resolve(users.build(newUser).save());
                     }
                 });
         });

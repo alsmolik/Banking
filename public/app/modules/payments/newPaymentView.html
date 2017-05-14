@@ -14,7 +14,7 @@
                 <div id="collapse{{serviceCategory.id}}" class="panel-collapse collapse">
                     <ul class="list-group">
                         <li class="list-group-item btn-link" style="cursor: pointer" ng-repeat="service in serviceCategory.Services"
-                            ng-bind="service.name" ng-click="openPaymentDialog(serviceCategory.name, service.name)"></li>
+                            ng-bind="service.name" ng-click="openPaymentDialog(service.id, serviceCategory.name, service.name)"></li>
                     </ul>
                 </div>
             </div>

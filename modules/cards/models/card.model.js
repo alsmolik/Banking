@@ -12,7 +12,7 @@ module.exports = function (sequelize, DataTypes) {
             unique: true,
             validate: {
                 is: {
-                    args: /^\d{4} \d{4} \d{4} \d{4}$/,
+                    args: /^\d{16}$/,
                     msg: 'Номер карты должен содержать только цифры'
                 }
             }
