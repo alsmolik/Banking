@@ -3,8 +3,8 @@ const server = supertest.agent("http://localhost:3000");
 
 describe("SAMPLE unit test", function () {
     it("should return home page", function () {
-        server
-            .get('/api/payments/1/list')
+        return server
+            .get('/api/users/1/payments/list')
             .expect(200);
     });
 });
